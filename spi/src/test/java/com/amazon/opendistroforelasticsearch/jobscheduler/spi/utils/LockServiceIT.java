@@ -35,9 +35,10 @@ import com.amazon.opendistroforelasticsearch.jobscheduler.spi.JobExecutionContex
 import com.amazon.opendistroforelasticsearch.jobscheduler.spi.LockModel;
 import com.amazon.opendistroforelasticsearch.jobscheduler.spi.ScheduledJobParameter;
 import com.amazon.opendistroforelasticsearch.jobscheduler.spi.schedule.Schedule;
+//import com.carrotsearch.randomizedtesting.RandomizedRunner;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.test.ESIntegTestCase;
-import org.junit.Test;
+//import org.junit.runner.RunWith;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -50,6 +51,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicReference;
 
 @ESIntegTestCase.ClusterScope(scope = ESIntegTestCase.Scope.SUITE, numDataNodes =1)
+//@RunWith(RandomizedRunner.class)
 public class LockServiceIT extends ESIntegTestCase {
 
     static final String JOB_ID = "test_job_id";
@@ -85,6 +87,7 @@ public class LockServiceIT extends ESIntegTestCase {
             return LOCK_DURATION_SECONDS;
         }
     };
+
 
     public void testSanity() {
         LockService lockService = new LockService(client(), clusterService());
