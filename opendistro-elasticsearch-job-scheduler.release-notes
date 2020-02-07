@@ -1,4 +1,4 @@
-## version 1.4.0.0 (Current test)
+## version 1.4.0.0 (Current testing)
 
 ### Notable Changes
 * Feature [PR #31](https://github.com/opendistro-for-elasticsearch/job-scheduler/pull/31) Support ES version 7.4.2
