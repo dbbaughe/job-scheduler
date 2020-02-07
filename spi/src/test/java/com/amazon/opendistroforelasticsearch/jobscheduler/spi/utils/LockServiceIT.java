@@ -39,4 +39,5 @@ public class LockServiceIT extends ESIntegTestCase {
 
     public void testSanity() throws Exception {
         assertTrue(true);
+    }
 }
